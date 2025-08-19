@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'roboto_400';
+    src: url('../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'roboto_500';
+    src: url('../assets/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'roboto_600';
+    src: url('../assets/fonts/Roboto/Roboto-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'roboto_700';
+    src: url('../assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'roboto_900';
+    src: url('../assets/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'nosifer';
+    src: url('../assets/fonts/Nosifer/Nosifer-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    max-height: 80%;
+    border-radius: 90px;
+    box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.left-side {
+    flex: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    .left-side {
+        display: flex;
+    }
+}
+
+.left-side img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.right-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #2d1a63;
+    margin-bottom: 10px;
+    font-family: roboto_900;
+}
+
+h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: roboto_900;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-family: roboto_400;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-bottom: 1px solid #2d1a63;
+}
+
+.security-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .captcha {
+    background: #ccc;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+} */
+.captcha-input-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.captcha-input-wrapper input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.captcha {
+    background: #D0D0D0;
+    padding: 3px 16px;
+    width: 115px;
+    font-family: nosifer;
+    font-weight: 400;
+    font-size: 14px;
+    /* white-space: no */
+}
+
+.refresh-btn {
+    background: #eee;
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.refresh-btn:hover {
+    background: #ddd;
+    transform: rotate(90deg);
+}
+
+
+
+.login-btn {
+    margin-top: 20px;
+    padding: 10px 34px;
+    font-family: roboto_600;
+    background: #005AEA;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #003d99;
+}
+
+
+
+@media screen and (max-width: 450px) {
+    /* body {
+        padding-top: 0px;
+    }  */
+
+    .container {
+        display: flex;
+        max-width: 325px;
+        width: 100%;
+        max-height: 80%;
+        border-radius: 60px;
+        box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.78);
+    }
+}

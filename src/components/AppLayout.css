@@ -1,0 +1,73 @@
+.applayout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: white;
+  /* or based on dark mode */
+}
+
+.layout {
+  display: flex;
+}
+
+/* Topbar for mobile */
+.topbar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #CDE6FC;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo_header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-wrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Show topbar and hide sidebar on mobile */
+@media screen and (max-width: 500px) {
+  .topbar {
+    display: flex;
+    width: 100%;
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #CDE6FC;
+    z-index: 1000;
+    transform: translateX(-100%);
+  }
+
+  .sidebar-wrapper.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

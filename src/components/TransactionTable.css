@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Poppins_400';
+    src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins_500';
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins_700';
+    src: url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins_600';
+    src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins_800';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins_900';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: 400;
+}
+
+
+.tabledata thead {
+    font-family: Poppins_700;
+
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Poppins, sans-serif;
+}
+
+.transaction-table th {
+    background-color: #287CB4;
+    color: #fff;
+    padding: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.transaction-table td {
+    padding: 13px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.transaction-table tr:hover {
+    background-color: #CDE6FC;
+}
+
+.transaction-table .even-row {
+    background-color: #ECECEC;
+}
+
+.transaction-table .odd-row {
+    background-color: #f7f7f7;
+}
+
+/* Dark mode styles */
+body.dark-mode .transaction-table th {
+    background-color: #287CB4;
+    color: #ffffff;
+}
+
+body.dark-mode .transaction-table td {
+    color: #e0e0e0;
+}
+
+body.dark-mode .transaction-table .even-row {
+    background-color: #404040;
+}
+
+body.dark-mode .transaction-table .odd-row {
+    background-color: #1F1F1F;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: #CDE6FC;
+    float: right;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+body.dark-mode .pagination {
+    background: #042A4A;
+}
+
+.page-button,
+.nav-button {
+    margin: 0 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+.page-button.active {
+    background-color: #247BA0;
+    color: white;
+}
+
+
+body.dark-mode .page-button,
+body.dark-mode .nav-button {
+    color: #ddd;
+}
+
+body.dark-mode .page-button.active {
+    background-color: #4a90e2;
+    color: white;
+}
+
+body.dark-mode .transaction-table tr:hover {
+    background-color: #042A4A;
+}
+
+.ellipsis {
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #888;
+    user-select: none;
+}

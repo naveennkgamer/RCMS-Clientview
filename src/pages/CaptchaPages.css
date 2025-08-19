@@ -1,0 +1,245 @@
+.container_captchapage {
+  text-align: center;
+  max-width: 450px;
+  width: 40%;
+  /* max-height: 100%; */
+  border-radius: 90px;
+  box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  background: rgb(255 255 255 / 64%);
+}
+
+@font-face {
+  font-family: 'roboto_400';
+  src: url('../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'roboto_500';
+  src: url('../assets/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'roboto_600';
+  src: url('../assets/fonts/Roboto/Roboto-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'roboto_700';
+  src: url('../assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'roboto_900';
+  src: url('../assets/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'nosifer';
+  src: url('../assets/fonts/Nosifer/Nosifer-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+.logo_captchapage img {
+  width: 80px;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  height: 90px;
+}
+
+.radianttit_captchapage h1 {
+  color: #392B60;
+  font-family: 'roboto_900';
+  font-size: 35px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.captchaimg {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  max-width: 435px;
+  padding: 0px 56px;
+  margin-bottom: 35px;
+}
+
+.capimg img {
+  width: 70px;
+  height: 70px;
+}
+
+.refreshbut_captchapage {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.refreshbtn_captchapage {
+  padding: 13px 20px;
+  font-family: roboto_600;
+  background: #005AEA;
+  color: white;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.authorized-btn {
+  padding: 13px 20px;
+  font-family: roboto_600;
+  background: #392B60;
+  color: white;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+/* function  */
+
+
+
+.capimg {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.capimg img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  transition: 0.3s ease;
+}
+
+/* Full solid dark cover */
+.capimg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000008f;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Show full dark cover instantly on hover */
+.capimg:hover::after {
+  opacity: 1;
+}
+
+/* Text in the center, above everything */
+.hoverLabel_captchapage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: roboto_600;
+  font-size: 14px;
+  color: #ffffff;
+  /* pure bright white */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Show text on hover */
+.capimg:hover .hoverLabel_captchapage {
+  opacity: 1;
+}
+
+
+
+@media (max-width: 992px) {
+  .container_captchapage {
+    width: 80%;
+    border-radius: 30px;
+    padding: 20px 10px;
+  }
+
+  .captchaimg {
+    padding: 0 15px;
+    gap: 12px;
+  }
+
+  .capimg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+    padding-top: 30px;
+  }
+
+  .radianttit h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .hoverLabel_captchapage {
+    font-size: 13px;
+  }
+
+  .refresh-btn_captchapage,
+  .authorized-btn {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .refreshbut_captchapage {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Mobile specific tweaks (below 480px) */
+@media (max-width: 480px) {
+  .container_captchapage {
+    width: 95%;
+  }
+
+  .capimg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hoverLabel_captchapage {
+    font-size: 12px;
+  }
+}
+
+/* Highlight the selected image */
+.capimg.selected {
+  border: 3px solid #005AEA;
+  /* blue border */
+
+  box-sizing: border-box;
+  /* prevent size shift */
+}
+
+/* Make sure the hoverLabel is visible when selected */
+.capimg.selected .hoverLabel_captchapage {
+  opacity: 1;
+  background: #0000008f;
+}
